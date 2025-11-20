@@ -20,12 +20,16 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        # If you have package-lock.json, you can use:
+        # run: npm ci
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         run: npx playwright test
+        # If you want the workflow to PASS even when tests fail, use:
+        # run: npx playwright test || true
 
       - name: Upload Playwright report
         if: always()
