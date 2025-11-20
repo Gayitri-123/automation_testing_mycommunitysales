@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const config = require('../test-config.js'); // keep if you need later
+const config = require('../test-config.js'); // keep for future use if you want
 
 test('Explore login page', async ({ page }) => {
   // Go to homepage
@@ -34,10 +34,9 @@ test('Explore login page', async ({ page }) => {
     console.log('Page contains "Send":', bodyText.includes('Send'));
     console.log('Page contains "Verify":', bodyText.includes('Verify'));
 
-    // Optional: real assertions to make CI meaningful
-    await expect(phoneInputs).toHaveCount(phoneCount); // basic sanity
+    // Example assertion so test is meaningful
+    await expect(loginBtn).toBeVisible();
   } else {
-    // Optional: fail test if there is no login button at all
     throw new Error('Login button not found on homepage');
   }
 });
