@@ -1,0 +1,338 @@
+# ═══════════════════════════════════════════════════════════════════════════════════
+# MYCOMMUNITYSALES COMPREHENSIVE BUTTON & INTERACTION TEST
+# Complete website button testing - All clickable elements verified
+# ═══════════════════════════════════════════════════════════════════════════════════
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 1: HOMEPAGE BUTTONS & NAVIGATION
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 1 — HOMEPAGE LOAD & INFRASTRUCTURE
+Load homepage
+Wait 2000
+Take full-page screenshot
+Check page load time
+Confirm no JavaScript console errors
+Check missing CSS/JS resources
+
+# PHASE 2 — HOMEPAGE HEADER NAVIGATION BUTTONS
+Expect page to contain "Home"
+Expect page to contain "Marketplace"
+Expect page to contain "Service"
+Expect page to contain "MyCommunitySales"
+Expect page to contain "Contact"
+Take full-page screenshot
+
+# PHASE 3 — VERIFY ALL HEADER LINKS ARE CLICKABLE
+Wait 1000
+Click link "Home"
+Wait 1500
+Take screenshot "clicked_home_link"
+Load homepage
+Wait 1000
+
+# PHASE 4 — CLICK MARKETPLACE NAVIGATION BUTTON
+Wait 1000
+Click link "Marketplace"
+Wait 2000
+Take screenshot "clicked_marketplace_nav"
+Load homepage
+Wait 1000
+
+# PHASE 5 — CLICK SERVICE VENDORS NAVIGATION BUTTON
+Wait 1000
+Click link "Service"
+Wait 2000
+Take screenshot "clicked_service_nav"
+Load homepage
+Wait 1000
+
+# PHASE 6 — CLICK MYCOMMUNITYSALES NAVIGATION BUTTON
+Wait 1000
+Click link "MyCommunitySales"
+Wait 2000
+Take screenshot "clicked_mycommunitysales_nav"
+Load homepage
+Wait 1000
+
+# PHASE 7 — CLICK CONTACT NAVIGATION BUTTON
+Wait 1000
+Click link "Contact"
+Wait 2000
+Take screenshot "clicked_contact_nav"
+Load homepage
+Wait 1000
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 2: MARKETPLACE PAGE BUTTONS & CONTROLS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 8 — NAVIGATE TO MARKETPLACE
+Open /garage-sale/marketplace
+Wait 2000
+Take full-page screenshot
+Expect page to contain "Search"
+
+# PHASE 9 — TEST MARKETPLACE SEARCH FUNCTIONALITY
+Wait 1000
+Search for "teddy bear"
+Wait 3000
+Take screenshot "marketplace_search_results"
+Expect page to contain "teddy"
+
+# PHASE 10 — VERIFY PRODUCT RESULT BUTTONS ARE CLICKABLE
+Wait 1000
+Click on first item
+Wait 2000
+Take screenshot "product_clicked_from_search"
+
+# PHASE 11 — VERIFY PRODUCT DETAIL PAGE LOADS
+Expect page to contain "Rs"
+Take full-page screenshot
+
+# PHASE 12 — TEST ADD TO CART BUTTON
+Wait 1000
+Add to cart
+Wait 2000
+Take screenshot "add_to_cart_button_clicked"
+
+# PHASE 13 — RETURN TO MARKETPLACE FOR FILTER BUTTONS
+Open /garage-sale/marketplace
+Wait 2000
+Take full-page screenshot
+
+# PHASE 14 — TEST MARKETPLACE SEARCH WITH DIFFERENT KEYWORDS
+Wait 1000
+Search for "mobile"
+Wait 2000
+Take screenshot "search_mobile_results"
+
+# PHASE 15 — CLICK FIRST MOBILE RESULT
+Wait 1000
+Click on first item
+Wait 2000
+Take screenshot "mobile_product_clicked"
+
+# PHASE 16 — GO BACK TO MARKETPLACE
+Open /garage-sale/marketplace
+Wait 1500
+Take full-page screenshot
+
+# PHASE 17 — TEST ANOTHER SEARCH QUERY
+Wait 1000
+Search for "book"
+Wait 2000
+Take screenshot "search_book_results"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 3: SHOPPING CART BUTTONS & OPERATIONS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 18 — NAVIGATE TO SHOPPING CART
+Open /cart
+Wait 2000
+Take full-page screenshot
+Screenshot "cart_page_loaded"
+
+# PHASE 19 — VERIFY CART CONTENTS
+Expect page to contain "Item"
+Wait 1000
+Take full-page screenshot
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 4: SERVICE VENDORS PAGE BUTTONS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 20 — NAVIGATE TO SERVICE VENDORS
+Open /service
+Wait 2000
+Take full-page screenshot
+Screenshot "service_vendors_page"
+
+# PHASE 21 — VERIFY SERVICE VENDOR CONTENT LOADS
+Expect page to contain "Service"
+Expect page to contain "Vendor"
+Take full-page screenshot
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 5: INFORMATION PAGES BUTTONS & NAVIGATION
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 22 — NAVIGATE TO RELEASE NOTES
+Open /garage-sale/release-notes
+Wait 2000
+Take full-page screenshot
+Screenshot "release_notes_page"
+Expect page to contain "Release"
+
+# PHASE 23 — NAVIGATE TO BUG REPORT
+Open /garage-sale/feature-bug/report
+Wait 2000
+Take full-page screenshot
+Screenshot "bug_report_page"
+Expect page to contain "Report"
+
+# PHASE 24 — NAVIGATE TO CONTACT US
+Open /contactus
+Wait 2000
+Take full-page screenshot
+Screenshot "contact_us_page"
+Expect page to contain "Contact"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 6: FOOTER BUTTONS & LINKS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 25 — RETURN TO HOMEPAGE TO TEST FOOTER BUTTONS
+Load homepage
+Wait 2000
+Take full-page screenshot
+
+# PHASE 26 — VERIFY FOOTER LINKS PRESENT
+Expect page to contain "Contact"
+Expect page to contain "WhatsApp"
+Expect page to contain "LinkedIn"
+Take full-page screenshot
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 7: COMPREHENSIVE BUTTON INTERACTION TEST
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 27 — MARKETPLACE MULTIPLE SEARCHES
+Open /garage-sale/marketplace
+Wait 1500
+Search for "furniture"
+Wait 2000
+Take screenshot "search_furniture_comprehensive"
+
+# PHASE 28 — SEARCH ELECTRONICS
+Wait 1000
+Search for "electronic"
+Wait 2000
+Take screenshot "search_electronic_comprehensive"
+
+# PHASE 29 — SEARCH SPORTS
+Wait 1000
+Search for "sports"
+Wait 2000
+Take screenshot "search_sports_comprehensive"
+
+# PHASE 30 — SEARCH CLOTHES
+Wait 1000
+Search for "clothes"
+Wait 2000
+Take screenshot "search_clothes_comprehensive"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 8: PRODUCT INTERACTION TESTING
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 31 — CLICK FIRST FURNITURE PRODUCT
+Wait 1000
+Click on first item
+Wait 2000
+Take screenshot "furniture_product_clicked"
+
+# PHASE 32 — VERIFY PRODUCT PAGE LOADS
+Expect page to contain "Rs"
+Take full-page screenshot
+
+# PHASE 33 — RETURN TO MARKETPLACE AND TEST ANOTHER PRODUCT
+Open /garage-sale/marketplace
+Wait 1500
+Search for "furniture"
+Wait 2000
+
+# PHASE 34 — CLICK SECOND PRODUCT APPROACH
+Wait 1000
+Click on first item
+Wait 2000
+Take screenshot "furniture_product_2_clicked"
+
+# PHASE 35 — ADD ANOTHER ITEM TO CART
+Wait 1000
+Add to cart
+Wait 2000
+Take screenshot "add_second_item_to_cart"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 9: EXTENDED NAVIGATION TEST
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 36 — NAVIGATE TO EACH MAIN PAGE SEQUENTIALLY
+Open /
+Wait 2000
+Take screenshot "homepage_verification_1"
+
+# PHASE 37 — MARKETPLACE VERIFICATION
+Open /garage-sale/marketplace
+Wait 2000
+Take screenshot "marketplace_verification_1"
+
+# PHASE 38 — SERVICE VENDORS VERIFICATION
+Open /service
+Wait 2000
+Take screenshot "service_verification_1"
+
+# PHASE 39 — RELEASE NOTES VERIFICATION
+Open /garage-sale/release-notes
+Wait 2000
+Take screenshot "release_notes_verification_1"
+
+# PHASE 40 — BUG REPORT VERIFICATION
+Open /garage-sale/feature-bug/report
+Wait 2000
+Take screenshot "bug_report_verification_1"
+
+# PHASE 41 — CONTACT US VERIFICATION
+Open /contactus
+Wait 2000
+Take screenshot "contact_us_verification_1"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 10: FINAL COMPREHENSIVE VERIFICATION
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 42 — FINAL HOMEPAGE CHECK
+Load homepage
+Wait 2000
+Take full-page screenshot
+Take screenshot "homepage_final_comprehensive"
+
+# PHASE 43 — VERIFY ALL NAVIGATION BUTTONS PRESENT
+Expect page to contain "Home"
+Expect page to contain "Marketplace"
+Expect page to contain "Service"
+Expect page to contain "MyCommunitySales"
+Expect page to contain "Contact"
+Take full-page screenshot
+
+# PHASE 44 — CHECK CONSOLE FOR ERRORS
+Confirm no JavaScript console errors
+Check missing CSS/JS resources
+Take full-page screenshot
+
+# PHASE 45 — VERIFY FOOTER ELEMENTS PRESENT
+Expect page to contain "Contact"
+Expect page to contain "WhatsApp"
+Take full-page screenshot
+
+# PHASE 46 — FINAL RESOURCE INTEGRITY CHECK
+Check broken links
+Take full-page screenshot
+
+# ═══════════════════════════════════════════════════════════════════════════════════
+# END OF COMPREHENSIVE BUTTON & INTERACTION TEST
+# ═══════════════════════════════════════════════════════════════════════════════════
+# Total Phases: 46
+# Coverage:
+#   ✓ Homepage Navigation (7 phases)
+#   ✓ Marketplace Buttons (10 phases)
+#   ✓ Shopping Cart (2 phases)
+#   ✓ Service Vendors (2 phases)
+#   ✓ Information Pages (3 phases)
+#   ✓ Footer Navigation (2 phases)
+#   ✓ Product Interactions (9 phases)
+#   ✓ Extended Navigation (6 phases)
+#   ✓ Final Verification (5 phases)
+# ═══════════════════════════════════════════════════════════════════════════════════

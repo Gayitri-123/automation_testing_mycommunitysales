@@ -1,0 +1,98 @@
+# MYCOMMUNITYSALES LOGIN + CREATE LISTING - OPTIMIZED
+# Flow: Login → MyCommunitySales → Create Listing (with proper selectors)
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 1: LOGIN WITH PHONE AND OTP
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 1: ACCESS LOGIN PAGE
+Open /web/login
+Wait 2000
+Screenshot "01_login_page"
+Expect page to contain "phone"
+
+# PHASE 2: ENTER PHONE NUMBER
+Enter phone with country code 91 9347372054
+Wait 1500
+Screenshot "02_phone_entered"
+
+# PHASE 3: SEND OTP
+Click button containing "Send"
+Wait 3000
+Screenshot "03_otp_sent"
+
+# PHASE 4: ENTER OTP CODE
+Enter OTP 123456
+Wait 1500
+Screenshot "04_otp_entered"
+
+# PHASE 5: VERIFY LOGIN
+Click button containing "Verify"
+Wait 3000
+Screenshot "05_otp_verified"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 2: NAVIGATE TO MYCOMMUNITYSALES
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 6: CLICK MYCOMMUNITYSALES NAVBAR
+Click link "MyCommunitySales"
+Wait 2000
+Screenshot "06_mycommunitysales_navbar"
+Expect page to contain "MyCommunitySales"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 3: CREATE NEW LISTING
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 7: NAVIGATE TO CREATE LISTING PAGE
+Open /garage-sale/create-listing
+Wait 3000
+Screenshot "07_create_listing_page"
+
+# PHASE 8: WAIT FOR FORM LOAD
+Wait 3000
+Screenshot "08_form_loaded"
+
+# PHASE 9: FILL LISTING DETAILS - TITLE
+Fill "title" with "Used Dell Laptop"
+Wait 800
+Screenshot "09_title_entered"
+
+# PHASE 10: FILL DESCRIPTION
+Fill "description" with "Dell Inspiron 15 Laptop in perfect condition. 8GB RAM, 256GB SSD, Windows 11"
+Wait 800
+Screenshot "10_description_entered"
+
+# PHASE 11: FILL PRICE
+Fill "price" with "25000"
+Wait 800
+Screenshot "11_price_entered"
+
+# PHASE 12: VERIFY FORM FILLED
+Screenshot "12_form_all_filled"
+
+# PHASE 13: CLICK PUBLISH BUTTON
+Click button containing "Publish"
+Wait 3000
+Screenshot "13_listing_published"
+
+# PHASE 14: VERIFY SUCCESS
+Expect page to contain "successful"
+Wait 1000
+Screenshot "14_success_message"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 4: VERIFICATION
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 15: CHECK PAGE STATE
+Wait 2000
+Screenshot "15_final_state"
+
+# PHASE 16: CHECK CONSOLE
+Check console
+Screenshot "16_console_final"
+
+# PHASE 17: TEST COMPLETE
+Screenshot "17_test_complete"

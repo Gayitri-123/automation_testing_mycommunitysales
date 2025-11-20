@@ -1,0 +1,182 @@
+# MYCOMMUNITYSALES COMPREHENSIVE LOGIN + BUTTON TEST
+# Testing: Phone entry → OTP entry → Verification → Navigation → Shopping
+
+# PHASE 1: HOMEPAGE LOAD & VERIFY
+Open homepage
+Wait 2000
+Screenshot "phase_1_homepage"
+Check console
+Check loadtime
+Expect page to contain "Home"
+Expect page to contain "Marketplace"
+
+# PHASE 2: ENTER PHONE NUMBER WITH COUNTRY CODE
+Enter phone with country code 91 9347372054
+Wait 1500
+Screenshot "phase_2_phone_entered"
+
+# PHASE 3: SEND OTP
+Click button containing "Send"
+Wait 3000
+Screenshot "phase_3_otp_send_clicked"
+
+# PHASE 4: ENTER OTP CODE
+Enter OTP 123456
+Wait 1500
+Screenshot "phase_4_otp_entered"
+
+# PHASE 5: CLICK VERIFY BUTTON
+Click button containing "Verify"
+Wait 3000
+Screenshot "phase_5_verify_clicked"
+
+# PHASE 6: VERIFY DASHBOARD LOADED
+Expect page to contain "dashboard"
+Wait 1000
+Screenshot "phase_6_dashboard_loaded"
+
+# PHASE 7: CLICK MYCOMMUNITYSALES GROUP LINK
+Click link "MyCommunitySales"
+Wait 2000
+Screenshot "phase_7_group_selected"
+
+# PHASE 8: NAVIGATE TO HOME (AUTHENTICATED)
+Click link "Home"
+Wait 1500
+Screenshot "phase_8_auth_home"
+Expect page to contain "Home"
+
+# PHASE 9: NAVIGATE TO MARKETPLACE (AUTHENTICATED)
+Click link "Marketplace"
+Wait 2000
+Screenshot "phase_9_auth_marketplace"
+Expect page to contain "Search"
+
+# PHASE 10: SEARCH FOR PRODUCT - TEDDY BEAR
+Search for "teddy bear"
+Wait 2000
+Screenshot "phase_10_search_teddy_bear"
+Expect page to contain "teddy"
+
+# PHASE 11: CLICK FIRST PRODUCT
+Click on first item
+Wait 2000
+Screenshot "phase_11_product_clicked"
+
+# PHASE 12: ADD TO CART
+Add to cart
+Wait 1500
+Screenshot "phase_12_add_to_cart"
+
+# PHASE 13: NAVIGATE TO SERVICE
+Open /garage-sale/marketplace
+Wait 1500
+Click link "Service"
+Wait 2000
+Screenshot "phase_13_service_page"
+
+# PHASE 14: SEARCH FOR FURNITURE
+Search for "furniture"
+Wait 1500
+Screenshot "phase_14_search_furniture"
+
+# PHASE 15: CLICK FURNITURE PRODUCT
+Click on first item
+Wait 1500
+Screenshot "phase_15_furniture_clicked"
+
+# PHASE 16: ADD FURNITURE TO CART
+Add to cart
+Wait 1500
+Screenshot "phase_16_furniture_added"
+
+# PHASE 17: OPEN CART
+Open /cart
+Wait 2000
+Screenshot "phase_17_cart_opened"
+
+# PHASE 18: VERIFY CART HAS ITEMS
+Expect page to contain "Item"
+Screenshot "phase_18_cart_verified"
+
+# PHASE 19: MARKETPLACE SEARCH - ELECTRONICS
+Open /garage-sale/marketplace
+Wait 1500
+Search for "electronic"
+Wait 1500
+Screenshot "phase_19_electronics_search"
+
+# PHASE 20: MARKETPLACE SEARCH - SPORTS
+Search for "sports"
+Wait 1500
+Screenshot "phase_20_sports_search"
+
+# PHASE 21: MARKETPLACE SEARCH - CLOTHES
+Search for "clothes"
+Wait 1500
+Screenshot "phase_21_clothes_search"
+
+# PHASE 22: NAVIGATE TO RELEASE NOTES
+Open /garage-sale/release-notes
+Wait 2000
+Screenshot "phase_22_release_notes"
+Expect page to contain "Release"
+
+# PHASE 23: NAVIGATE TO BUG REPORT
+Open /garage-sale/feature-bug/report
+Wait 2000
+Screenshot "phase_23_bug_report"
+Expect page to contain "Report"
+
+# PHASE 24: NAVIGATE TO CONTACT US
+Open /contactus
+Wait 2000
+Screenshot "phase_24_contact_us"
+Expect page to contain "Contact"
+
+# PHASE 25: NAVIGATE TO SERVICE VENDORS
+Open /service
+Wait 2000
+Screenshot "phase_25_service_vendors"
+Expect page to contain "Service"
+
+# PHASE 26: CHECK ALL NAVIGATION BUTTONS
+Click link "Home"
+Wait 1500
+Screenshot "phase_26_final_home"
+Expect page to contain "Home"
+
+# PHASE 27: CHECK MARKETPLACE BUTTON
+Click link "Marketplace"
+Wait 2000
+Screenshot "phase_27_final_marketplace"
+
+# PHASE 28: CHECK MYCOMMUNITYSALES BUTTON
+Click link "MyCommunitySales"
+Wait 2000
+Screenshot "phase_28_final_mycommunitysales"
+Expect page to contain "MyCommunitySales"
+
+# PHASE 29: VERIFY NO CONSOLE ERRORS
+Check console
+Screenshot "phase_29_console_check"
+
+# PHASE 30: VERIFY BROKEN LINKS
+Check broken-links
+Screenshot "phase_30_links_check"
+
+# PHASE 31: VERIFY BROKEN IMAGES
+Check broken-images
+Screenshot "phase_31_images_check"
+
+# PHASE 32: FINAL HOMEPAGE VERIFICATION
+Open homepage
+Wait 1500
+Screenshot "phase_32_final_homepage"
+
+# PHASE 33: EXPECT FINAL CONTENT
+Expect page to contain "Home"
+Expect page to contain "Marketplace"
+
+# PHASE 34: TEST COMPLETE
+Screenshot "phase_34_test_complete"

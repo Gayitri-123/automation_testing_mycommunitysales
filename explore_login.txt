@@ -1,0 +1,14 @@
+# EXPLORE LOGIN PAGE STRUCTURE
+Open homepage
+Wait 2000
+Screenshot "1_homepage"
+
+# Try different ways to find login
+Click link "Login"
+Wait 2000
+Screenshot "2_after_login_click"
+
+# Check what's on the page
+Expect page to contain "phone"
+Expect page to contain "whatsapp"
+Expect page to contain "country"

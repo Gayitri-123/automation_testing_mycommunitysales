@@ -1,0 +1,200 @@
+# MYCOMMUNITYSALES COMPLETE LOGIN + BUTTON TEST
+# Proper Flow: Homepage → Login Page → Phone/OTP → Dashboard → Full Navigation Test
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 1: HOMEPAGE AND LOGIN PAGE ACCESS (4 Phases)
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 1: HOMEPAGE LOAD
+Open homepage
+Wait 2000
+Screenshot "phase_1_homepage_initial"
+Check console
+Check loadtime
+Expect page to contain "Home"
+Expect page to contain "Marketplace"
+
+# PHASE 2: ACCESS LOGIN PAGE
+Open /web/login
+Wait 2000
+Screenshot "phase_2_login_page"
+Expect page to contain "phone"
+
+# PHASE 3: ENTER PHONE WITH COUNTRY CODE
+Enter phone with country code 91 9347372054
+Wait 1500
+Screenshot "phase_3_phone_entered"
+
+# PHASE 4: CLICK SEND OTP BUTTON
+Click button containing "Send"
+Wait 3000
+Screenshot "phase_4_otp_sent"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 2: OTP VERIFICATION (4 Phases)
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 5: ENTER OTP CODE
+Enter OTP 123456
+Wait 1500
+Screenshot "phase_5_otp_entered"
+
+# PHASE 6: CLICK VERIFY BUTTON
+Click button containing "Verify"
+Wait 3000
+Screenshot "phase_6_otp_verified"
+
+# PHASE 7: VERIFY LOGIN SUCCESS - DASHBOARD
+Expect page to contain "dashboard"
+Wait 1000
+Screenshot "phase_7_dashboard_loaded"
+
+# PHASE 8: SELECT MYCOMMUNITYSALES GROUP
+Click link "MyCommunitySales"
+Wait 2000
+Screenshot "phase_8_group_selected"
+Expect page to contain "MyCommunitySales"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 3: AUTHENTICATED NAVIGATION (8 Phases)
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 9: HOME NAVIGATION (AUTHENTICATED)
+Click link "Home"
+Wait 1500
+Screenshot "phase_9_auth_home"
+Expect page to contain "Home"
+
+# PHASE 10: MARKETPLACE NAVIGATION (AUTHENTICATED)
+Click link "Marketplace"
+Wait 2000
+Screenshot "phase_10_auth_marketplace"
+Expect page to contain "Search"
+
+# PHASE 11: SERVICE NAVIGATION
+Click link "Service"
+Wait 2000
+Screenshot "phase_11_auth_service"
+Expect page to contain "Service"
+
+# PHASE 12: MYCOMMUNITYSALES NAVIGATION
+Click link "MyCommunitySales"
+Wait 2000
+Screenshot "phase_12_auth_mycommunitysales"
+Expect page to contain "MyCommunitySales"
+
+# PHASE 13: BACK TO MARKETPLACE FOR SHOPPING
+Click link "Marketplace"
+Wait 2000
+Screenshot "phase_13_auth_marketplace_shopping"
+
+# PHASE 14: RELEASE NOTES (AUTHENTICATED)
+Open /garage-sale/release-notes
+Wait 2000
+Screenshot "phase_14_auth_release_notes"
+Expect page to contain "Release"
+
+# PHASE 15: BUG REPORT (AUTHENTICATED)
+Open /garage-sale/feature-bug/report
+Wait 2000
+Screenshot "phase_15_auth_bug_report"
+Expect page to contain "Report"
+
+# PHASE 16: CONTACT US (AUTHENTICATED)
+Open /contactus
+Wait 2000
+Screenshot "phase_16_auth_contact_us"
+Expect page to contain "Contact"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 4: SHOPPING WORKFLOW AUTHENTICATED (6 Phases)
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 17: SEARCH FOR TEDDY BEAR
+Open /garage-sale/marketplace
+Wait 2000
+Search for "teddy bear"
+Wait 2000
+Screenshot "phase_17_search_teddy_bear"
+Expect page to contain "teddy"
+
+# PHASE 18: CLICK PRODUCT AND ADD TO CART
+Click on first item
+Wait 2000
+Screenshot "phase_18_product_detail"
+Add to cart
+Wait 1500
+Screenshot "phase_19_added_to_cart"
+
+# PHASE 19: SEARCH FURNITURE
+Open /garage-sale/marketplace
+Wait 1500
+Search for "furniture"
+Wait 1500
+Screenshot "phase_20_search_furniture"
+
+# PHASE 20: ADD FURNITURE TO CART
+Click on first item
+Wait 1500
+Add to cart
+Wait 1500
+Screenshot "phase_21_furniture_added_cart"
+
+# PHASE 21: SEARCH AND VIEW ELECTRONICS
+Search for "electronic"
+Wait 1500
+Screenshot "phase_22_search_electronics"
+
+# PHASE 22: SEARCH SPORTS AND CLOTHES
+Search for "sports"
+Wait 1500
+Screenshot "phase_23_search_sports"
+Search for "clothes"
+Wait 1500
+Screenshot "phase_24_search_clothes"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 5: CART VERIFICATION (3 Phases)
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 23: OPEN CART PAGE
+Open /cart
+Wait 2000
+Screenshot "phase_25_cart_page"
+Expect page to contain "Item"
+
+# PHASE 24: VERIFY CART CONTENTS
+Screenshot "phase_26_cart_verified"
+Expect page to contain "cart"
+
+# PHASE 25: VERIFY SERVICE VENDORS PAGE
+Open /service
+Wait 2000
+Screenshot "phase_27_service_vendors"
+Expect page to contain "Service"
+
+# ═══════════════════════════════════════════════════════════════════
+# SECTION 6: FINAL VERIFICATION (3 Phases)
+# ═══════════════════════════════════════════════════════════════════
+
+# PHASE 26: CHECK CONSOLE FOR ERRORS
+Check console
+Screenshot "phase_28_console_check"
+
+# PHASE 27: VERIFY BROKEN LINKS
+Check broken-links
+Screenshot "phase_29_links_verified"
+
+# PHASE 28: VERIFY BROKEN IMAGES
+Check broken-images
+Screenshot "phase_30_images_verified"
+
+# PHASE 29: FINAL HOMEPAGE CHECK
+Open homepage
+Wait 1500
+Screenshot "phase_31_final_homepage"
+Expect page to contain "Home"
+Expect page to contain "Marketplace"
+
+# PHASE 30: TEST COMPLETE
+Screenshot "phase_32_test_complete"

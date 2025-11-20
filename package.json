@@ -1,0 +1,17 @@
+{
+  "name": "mycommunitysales-regression",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report",
+    "test:interactive": "node test-runner.js",
+    "test:steps": "node list-steps.js",
+    "test:smoke": "STEP_TO=10 npx playwright test tests/comment-engine.spec.js --headed",
+    "test:marketplace": "STEP_FROM=10 STEP_TO=35 npx playwright test tests/comment-engine.spec.js --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0"
+  }
+}

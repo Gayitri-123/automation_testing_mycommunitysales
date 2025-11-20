@@ -1,0 +1,200 @@
+# ═══════════════════════════════════════════════════════════════════════════════════
+# MYCOMMUNITYSALES COMPLETE WORKFLOW TEST  
+# Phone Entry → OTP → Verify → MyCommunitySales → Create Listing → Full Website Test
+# ═══════════════════════════════════════════════════════════════════════════════════
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 1: LOGIN WORKFLOW (6 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 1: NAVIGATE TO LOGIN PAGE
+Open /web/login
+Wait 2000
+Screenshot "phase_01_login_page"
+
+# PHASE 2: ENTER PHONE NUMBER WITH COUNTRY CODE 91 9347372054
+Enter phone with country code 91 9347372054
+Wait 1500
+Screenshot "phase_02_phone_entered"
+
+# PHASE 3: CLICK SEND OTP BUTTON
+Click button containing "Send"
+Wait 3000
+Screenshot "phase_03_send_otp_clicked"
+
+# PHASE 4: ENTER OTP CODE 123456
+Enter OTP 123456
+Wait 1500
+Screenshot "phase_04_otp_entered"
+
+# PHASE 5: CLICK VERIFY AND SIGN IN BUTTON
+Click button containing "Verify"
+Wait 3000
+Screenshot "phase_05_verify_signin_clicked"
+
+# PHASE 6: VERIFY LOGIN SUCCESS
+Wait 1000
+Screenshot "phase_06_logged_in_dashboard"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 2: MYCOMMUNITYSALES NAVIGATION (3 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 7: CLICK MYCOMMUNITYSALES IN NAVBAR
+Click link "MyCommunitySales"
+Wait 2000
+Screenshot "phase_07_mycommunitysales_navbar"
+
+# PHASE 8: VERIFY MYCOMMUNITYSALES PAGE LOADED
+Wait 1000
+Screenshot "phase_08_mycommunitysales_page"
+
+# PHASE 9: LOOK FOR CREATE NEW LISTING BUTTON
+Wait 2000
+Screenshot "phase_09_mycommunitysales_full"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 3: CREATE NEW LISTING WORKFLOW (4 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 10: NAVIGATE TO CREATE LISTING PAGE
+Open /create-listing
+Wait 2000
+Screenshot "phase_10_create_listing_page"
+
+# PHASE 11: VERIFY CREATE LISTING FORM LOADED
+Wait 1000
+Screenshot "phase_11_create_listing_form"
+
+# PHASE 12: TRY CLICKING CREATE/PUBLISH BUTTON
+Click button containing "Create"
+Wait 2000
+Screenshot "phase_12_create_clicked"
+
+# PHASE 13: VERIFY FORM SUBMISSION
+Wait 1000
+Screenshot "phase_13_create_form_submit"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 4: MARKETPLACE TESTING - AUTHENTICATED (5 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 14: NAVIGATE TO MARKETPLACE
+Open /garage-sale/marketplace
+Wait 2000
+Screenshot "phase_14_marketplace_page"
+
+# PHASE 15: SEARCH FOR TEDDY BEAR
+Search for "teddy bear"
+Wait 2000
+Screenshot "phase_15_search_teddy_bear"
+
+# PHASE 16: CLICK FIRST PRODUCT
+Click on first item
+Wait 2000
+Screenshot "phase_16_product_detail"
+
+# PHASE 17: ADD TO CART
+Add to cart
+Wait 1500
+Screenshot "phase_17_added_to_cart"
+
+# PHASE 18: SEARCH FOR FURNITURE
+Search for "furniture"
+Wait 1500
+Screenshot "phase_18_search_furniture"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 5: SHOPPING CART (3 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 19: OPEN SHOPPING CART
+Open /cart
+Wait 2000
+Screenshot "phase_19_cart_page"
+
+# PHASE 20: SEARCH ELECTRONICS
+Search for "electronic"
+Wait 1500
+Screenshot "phase_20_search_electronics"
+
+# PHASE 21: SEARCH SPORTS
+Search for "sports"
+Wait 1500
+Screenshot "phase_21_search_sports"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 6: INFORMATION PAGES (4 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 22: RELEASE NOTES PAGE
+Open /garage-sale/release-notes
+Wait 2000
+Screenshot "phase_22_release_notes"
+
+# PHASE 23: BUG REPORT PAGE
+Open /garage-sale/feature-bug/report
+Wait 2000
+Screenshot "phase_23_bug_report"
+
+# PHASE 24: CONTACT US PAGE
+Open /contactus
+Wait 2000
+Screenshot "phase_24_contact_us"
+
+# PHASE 25: SERVICE VENDORS PAGE
+Open /service
+Wait 2000
+Screenshot "phase_25_service_vendors"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 7: FINAL NAVIGATION CHECK (4 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 26: CLICK HOME BUTTON
+Click link "Home"
+Wait 1500
+Screenshot "phase_26_final_home"
+
+# PHASE 27: CLICK MARKETPLACE BUTTON
+Click link "Marketplace"
+Wait 2000
+Screenshot "phase_27_final_marketplace"
+
+# PHASE 28: CLICK SERVICE BUTTON
+Click link "Service"
+Wait 2000
+Screenshot "phase_28_final_service"
+
+# PHASE 29: CLICK MYCOMMUNITYSALES BUTTON
+Click link "MyCommunitySales"
+Wait 2000
+Screenshot "phase_29_final_mycommunitysales"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SECTION 8: QUALITY CHECKS (3 Phases)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 30: CHECK CONSOLE FOR ERRORS
+Check console
+Screenshot "phase_30_console_check"
+
+# PHASE 31: VERIFY BROKEN LINKS
+Check broken-links
+Screenshot "phase_31_links_check"
+
+# PHASE 32: VERIFY BROKEN IMAGES
+Check broken-images
+Screenshot "phase_32_images_check"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# FINAL VERIFICATION
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# PHASE 33: FINAL HOMEPAGE CHECK
+Open homepage
+Wait 1500
+Screenshot "phase_33_final_homepage"
+
+# PHASE 34: TEST COMPLETE
+Screenshot "phase_34_test_complete"
