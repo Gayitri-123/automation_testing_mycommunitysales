@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
-const config = require('../test-config.js'); // keep for future use if you want
+// Removed: const CommentEngine = require('./comment-engine.helper.js');
+// Removed: const config = require('../test-config.js');
 
 test('Explore login page', async ({ page }) => {
   // Go to homepage
@@ -34,7 +35,6 @@ test('Explore login page', async ({ page }) => {
     console.log('Page contains "Send":', bodyText.includes('Send'));
     console.log('Page contains "Verify":', bodyText.includes('Verify'));
 
-    // Example assertion so test is meaningful
     await expect(loginBtn).toBeVisible();
   } else {
     throw new Error('Login button not found on homepage');
